@@ -1,3 +1,46 @@
 <resources>
     <string name="app_name">SalonBusiness</string>
+    <string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">AIzaSyDVfaW78Obg3MtpqE1jlGsXJDieJxugE3c</string>
+    <string name="drawer_open">Drawer Open</string>
+    <string name="drawer_close">Drawer Close</string>
+
+    <string-array name="seatNumber">
+        <item>Select seats</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+    </string-array>
+    <string-array name="hours_array">
+        <item>Hours</item>
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+    <string-array name="minutes_array">
+        <item>Minutes</item>
+        <item>10</item>
+        <item>15</item>
+        <item>20</item>
+        <item>25</item>
+        <item>30</item>
+        <item>35</item>
+        <item>40</item>
+        <item>45</item>
+        <item>50</item>
+        <item>55</item>
+    </string-array>
+    <string-array name="genderCategory">
+        <item>Select Gender</item>
+        <item>Male</item>
+        <item>Female</item>
+        <item>Unisex</item>
+    </string-array>
+    <string name="title_activity_maps">Map</string>
 </resources>

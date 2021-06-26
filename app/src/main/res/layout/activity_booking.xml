@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ViewModel.Booking">
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/profile_booking_tab_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:tabGravity="fill"
+        app:tabMode="scrollable"
+        app:tabTextAppearance="@style/TabStyle"
+        android:background="@color/colorRed"
+        app:tabTextColor="@color/colorWhite"
+        app:tabIndicatorColor="@color/colorWhite"/>
+    <androidx.viewpager.widget.ViewPager
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/profileBookingViewPager"
+        android:layout_below="@id/profile_booking_tab_layout"
+
+        />
+</RelativeLayout>

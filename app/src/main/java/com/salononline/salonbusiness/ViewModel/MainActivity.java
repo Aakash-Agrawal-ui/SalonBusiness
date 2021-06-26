@@ -1,8 +1,10 @@
-package com.salononline.salonbusiness;
+package com.salononline.salonbusiness.ViewModel;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import com.salononline.salonbusiness.R;
 
 public class MainActivity extends AppCompatActivity {
 

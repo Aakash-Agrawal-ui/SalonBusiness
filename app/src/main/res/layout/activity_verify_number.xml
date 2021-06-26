@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ViewModel.VerifyNumber">
+    <include
+        android:id="@+id/otp_toolbar_update"
+        layout="@layout/new_bar_design_layout"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+
+    <TextView
+        android:id="@+id/textOtpUpdate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/nexalight"
+        android:text="We have sent a verification code to"
+        android:textColor="@color/colorUnderLine"
+        android:textSize="19.7sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/otp_toolbar_update"
+        app:layout_constraintVertical_bias="0.078" />
+
+    <TextView
+        android:id="@+id/verifyNewNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textOtpUpdate"
+        android:fontFamily="@font/nexabold"
+        android:text="Number"
+        android:textColor="@color/colorUnderLine"
+        android:textSize="19.7sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textOtpUpdate"
+        app:layout_constraintVertical_bias="0.0" />
+
+
+    <com.chaos.view.PinView
+        android:id="@+id/enteredOtpUpdate"
+        style="@style/PinWidget.PinView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:cursorVisible="true"
+        android:gravity="center"
+        android:inputType="number"
+        android:itemBackground="@color/colorWhite"
+        android:padding="20dp"
+        android:textColor="@color/colorRed"
+        app:cursorColor="@color/colorRed"
+        app:hideLineWhenFilled="true"
+        app:itemCount="6"
+        app:itemHeight="40dp"
+        app:itemRadius="5dp"
+        app:itemWidth="40dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/verifyNewNumber"
+        app:layout_constraintVertical_bias="0.088"
+        app:lineColor="@color/colorRed" />
+
+    <Button
+        android:id="@+id/verifyOtpButtonUpdate"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/enteredOtpUpdate"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/new_button_red"
+        android:fontFamily="@font/nexaregular"
+        android:text="Submit OTP"
+        android:textAllCaps="false"
+        android:textColor="@color/colorWhite"
+        android:textSize="13.3sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/enteredOtpUpdate"
+        app:layout_constraintVertical_bias="0.088" />
+
+    <LinearLayout
+        android:id="@+id/textLayoutLinear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintVertical_bias=".92"
+        app:layout_constraintTop_toBottomOf="@+id/verifyOtpButtonUpdate">
+
+        <TextView
+            android:id="@+id/resendOtpNormalUpdate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/nexaregular"
+            android:text="Didn't receive the code? "
+            android:textColor="@color/colorUnderLine"
+            android:textSize="11.7sp" />
+
+        <TextView
+            android:id="@+id/resendOtpUpdate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="3dp"
+            android:fontFamily="@font/nexaregular"
+            android:text="Resend OTP"
+            android:textColor="#aaaaaa"
+            android:textSize="11.7sp" />
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

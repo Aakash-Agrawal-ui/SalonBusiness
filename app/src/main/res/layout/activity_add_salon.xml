@@ -1,0 +1,1156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ViewModel.AddSalon">
+
+    <include
+        android:id="@+id/add_salon_toolbar"
+        layout="@layout/new_bar_design_layout"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.014" />
+    <Button
+        android:id="@+id/addSalonHelpButtonLink"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/colorRed"
+        android:drawableLeft="@drawable/ic_call_black_24dp"
+        android:padding="5dp"
+        android:text="Help"
+        android:fontFamily="@font/nexaregular"
+        android:textAllCaps="false"
+        android:textStyle="bold"
+        android:textColor="@color/colorWhite"
+        android:textSize="15sp"
+        app:layout_constraintTop_toTopOf="@id/add_salon_toolbar"
+        app:layout_constraintBottom_toBottomOf="@+id/add_salon_toolbar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.99"
+        app:layout_constraintVertical_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+    <ImageView
+        android:id="@+id/addSalonLogo"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:background="@drawable/addsalon"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/add_salon_toolbar"
+        app:layout_constraintVertical_bias="0.016" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addSalonLogo"
+        app:layout_constraintVertical_bias="0.0">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:textSize="18.7sp"
+                android:fontFamily="@font/nexaregular"
+                android:text="Contact Information"
+                android:textStyle="bold"
+                android:textColor="@color/colorUnderLine"/>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/salonName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="30dp"
+                android:textSize="13.3sp"
+                android:textColorHint="@color/colorUnderLine"
+                app:errorEnabled="true">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Salon Name"
+                    android:fontFamily="@font/nexalight"
+                    android:paddingLeft="5dp"
+                    android:inputType="text" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/ownerName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="30dp"
+                android:textSize="13.3sp"
+                android:textColorHint="@color/colorUnderLine"
+                app:errorEnabled="true">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Owner Name"
+                    android:paddingLeft="5dp"
+                    android:fontFamily="@font/nexalight"
+                    android:inputType="text" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/salonMobile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="30dp"
+                android:textColorHint="@color/colorUnderLine"
+                app:counterEnabled="true"
+                app:counterMaxLength="10"
+                android:textSize="13.3sp"
+                app:counterTextColor="@color/colorUnderLine"
+                app:errorEnabled="true">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Salon Mobile Number"
+                    android:fontFamily="@font/nexalight"
+                    android:paddingLeft="5dp"
+                    android:inputType="number" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/salonEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="30dp"
+                android:textSize="13.3sp"
+                android:textColorHint="@color/colorUnderLine"
+                app:errorEnabled="true">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Salon Email"
+                    android:fontFamily="@font/nexalight"
+                    android:paddingLeft="5dp"
+                    android:inputType="textEmailAddress" />
+            </com.google.android.material.textfield.TextInputLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:textSize="18.7sp"
+                android:text="Address Details"
+                android:textStyle="bold"
+                android:fontFamily="@font/nexaregular"
+                android:textColor="@color/colorUnderLine"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/salonStreet"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="30dp"
+                android:textSize="13.3sp"
+                android:textColorHint="@color/colorUnderLine"
+                app:errorEnabled="true">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Street"
+                    android:fontFamily="@font/nexalight"
+                    android:paddingLeft="5dp"
+                    android:inputType="text" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/salonPinCode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="30dp"
+                android:textSize="13.3sp"
+                android:textColorHint="@color/colorUnderLine"
+                app:counterEnabled="true"
+                app:counterMaxLength="6"
+                app:counterTextColor="@color/colorUnderLine"
+                app:errorEnabled="true">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Pin Code"
+                    android:fontFamily="@font/nexalight"
+                    android:paddingLeft="5dp"
+                    android:inputType="number" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Spinner
+                android:id="@+id/countriesName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="18dp"
+                android:layout_marginRight="30dp" />
+
+            <Spinner
+                android:id="@+id/statesName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="30dp" />
+
+            <Spinner
+                android:id="@+id/citiesName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="30dp" />
+            <Spinner
+                android:id="@+id/salonLocality"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="18dp"
+                android:layout_marginRight="30dp" />
+
+
+            <Button
+                android:id="@+id/addLocation"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:background="@drawable/new_button_red"
+                android:layout_marginTop="23dp"
+                android:text="Browse Location ->"
+                android:fontFamily="@font/nexaregular"
+                android:textColor="@color/colorWhite"
+                android:textSize="13.3sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/latitude"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="10dp"
+                android:textSize="11.7sp"
+                android:fontFamily="@font/nexaregular"
+                android:text="Latitude:"
+                android:textColor="@color/colorUnderLine"/>
+
+            <TextView
+                android:id="@+id/longitude"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:fontFamily="@font/nexaregular"
+                android:textSize="11.7sp"
+                android:textColor="@color/colorUnderLine"
+                android:text="Longitude" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:textSize="18.7sp"
+                android:fontFamily="@font/nexaregular"
+                android:text="Salon Characteristics"
+                android:textStyle="bold"
+                android:textColor="@color/colorUnderLine"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="23dp"
+                android:layout_marginRight="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" Seats Available"
+                    android:fontFamily="@font/nexaregular"
+                    android:gravity="center"
+                    android:drawableLeft="@drawable/chair"
+                    android:textColor="@color/colorUnderLine"
+                    android:textSize="16.7sp" />
+
+                <Spinner
+                    android:id="@+id/seats"
+                    android:layout_width="fill_parent"
+                    android:layout_gravity="center"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="23dp"
+                android:layout_marginRight="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Gender Preferences"
+                    android:fontFamily="@font/nexaregular"
+                    android:textColor="@color/colorUnderLine"
+                    android:textSize="16.7sp" />
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:orientation="horizontal">
+                        <RadioButton
+                            android:layout_marginTop="10dp"
+                            android:id="@+id/maleGender"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:button="@drawable/male"
+                            android:layout_marginLeft="40dp"
+                            android:background="@drawable/male_design"
+                            />
+                        <RadioButton
+                            android:layout_marginTop="10dp"
+                            android:id="@+id/femaleGender"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:button="@drawable/female"
+                            android:layout_marginLeft="50dp"
+                            android:background="@drawable/male_design"/>
+
+                        <RadioButton
+                            android:layout_marginTop="10dp"
+                            android:id="@+id/unisexGender"
+                            android:layout_marginLeft="50dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:button="@drawable/unisex"
+                            android:background="@drawable/male_design"
+                            />
+                </RadioGroup>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="23dp"
+                android:text="Shop Facilities"
+                android:fontFamily="@font/nexaregular"
+                android:textColor="@color/colorUnderLine"
+                android:textSize="16.7sp" />
+            <TableLayout
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="13dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TableRow
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent">
+                    <CheckBox
+                        android:id="@+id/acAvailableCheck"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:text="AC Facilities"
+                        android:fontFamily="@font/nexalight"
+                        android:textSize="13.3sp"
+                        android:textColor="@color/colorUnderLine" />
+
+                    <CheckBox
+                        android:id="@+id/carParkingCheck"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:text="Car Parking"
+                        android:fontFamily="@font/nexalight"
+                        android:textSize="13.3sp"
+                        android:textColor="@color/colorUnderLine"
+                        />
+                </TableRow>
+
+                <TableRow
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent">
+                    <CheckBox
+                        android:id="@+id/bikeParkingCheck"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:text="Bike Parking"
+                        android:fontFamily="@font/nexalight"
+                        android:textSize="13.3sp"
+                        android:textColor="@color/colorUnderLine" />
+
+                    <CheckBox
+                        android:id="@+id/onlinePaymentCheck"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:text="Online Payment"
+                        android:fontFamily="@font/nexalight"
+                        android:textSize="13.3sp"
+                        android:textColor="@color/colorUnderLine"
+                        />
+                </TableRow>
+
+                <TableRow
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent">
+
+                    <CheckBox
+                        android:id="@+id/homeServiceCheck"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:text="Home Service"
+                        android:fontFamily="@font/nexalight"
+                        android:textSize="13.3sp"
+                        android:textColor="@color/colorUnderLine"
+                        />
+
+                    <CheckBox
+                        android:id="@+id/cardPaymentCheck"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:text="Card Payment"
+                        android:fontFamily="@font/nexalight"
+                        android:textSize="13.3sp"
+                        android:textColor="@color/colorUnderLine"
+                       />
+                </TableRow>
+                <TableRow
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent">
+
+                    <CheckBox
+                        android:id="@+id/hotWaterCheck"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:fontFamily="@font/nexalight"
+                        android:text="Hot Water"
+                        android:textSize="13.3sp"
+                        android:textColor="@color/colorUnderLine"
+                        />
+
+                    <CheckBox
+                        android:id="@+id/musicCheck"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/nexalight"
+                        android:layout_marginLeft="15dp"
+                        android:text="Music"
+                        android:textSize="13.3sp"
+                        android:textColor="@color/colorUnderLine"
+                        />
+                </TableRow>
+            </TableLayout>
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="23dp"
+                android:text="Shop Timings"
+                android:fontFamily="@font/nexaregular"
+                android:textColor="@color/colorUnderLine"
+                android:textSize="18.7sp"
+                android:textStyle="bold" />
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:orientation="vertical"
+               android:layout_marginTop="10dp"
+               android:layout_marginRight="10dp"
+               android:layout_marginLeft="10dp">
+               <LinearLayout
+                   android:layout_marginTop="10dp"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:orientation="horizontal">
+                   <TextView
+                       android:id="@+id/mondayText"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:text="Monday"
+                       android:fontFamily="@font/nexaregular"
+                       android:layout_marginLeft="10dp"
+                       android:textColor="@color/colorUnderLine"
+                       android:textSize="15sp"
+                       android:textStyle="bold"
+                       />
+
+                   <CheckBox
+                       android:id="@+id/mondayClosed"
+                       android:fontFamily="@font/nexalight"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_marginEnd="15dp"
+                       android:text="Closed"
+                       android:textColor="@color/colorUnderLine"
+                       android:textSize="13.3sp" />
+               </LinearLayout>
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_marginLeft="10dp"
+                   android:orientation="horizontal">
+                   <TextView
+                       android:id="@+id/mondayOpenTimeText"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:text="Open Time"
+                       android:fontFamily="@font/nexalight"
+                       android:textColor="@color/colorUnderLine"
+                       android:textSize="13.3sp"
+                      />
+
+                   <Button
+                       android:id="@+id/mondayOpenTime"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:text="9:00 AM"
+                       android:textSize="13.3sp"
+                       android:fontFamily="@font/nexaregular"
+                       android:layout_marginLeft="5dp"
+                     />
+
+                   <TextView
+                       android:id="@+id/mondayCloseTimeText"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:text="Close Time"
+                       android:fontFamily="@font/nexalight"
+                       android:layout_marginLeft="5dp"
+                       android:textColor="@color/colorUnderLine"
+                       android:textSize="13.3sp"
+                        />
+
+                   <Button
+                       android:id="@+id/mondayCloseTime"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:text="7:00 PM"
+                       android:fontFamily="@font/nexaregular"
+                       android:textSize="13.3sp"
+                       android:layout_marginLeft="5dp"/>
+               </LinearLayout>
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:orientation="horizontal"
+                   android:layout_marginTop="10dp">
+                   <TextView
+                       android:id="@+id/tuesdayText"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:text="Tuesday"
+                       android:fontFamily="@font/nexaregular"
+                       android:textColor="@color/colorUnderLine"
+                       android:textSize="15sp"
+                       android:textStyle="bold"
+                       android:layout_marginLeft="10dp"
+                       />
+
+                   <CheckBox
+                       android:id="@+id/tuesdayClosed"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:text="Closed"
+                       android:fontFamily="@font/nexalight"
+                       android:layout_marginEnd="15dp"
+                       android:textColor="@color/colorUnderLine"
+                       android:textSize="13.3sp"
+                       />
+               </LinearLayout>
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:orientation="horizontal"
+                   android:layout_marginLeft="10dp">
+                   <TextView
+                       android:id="@+id/tuesdayOpenTimeText"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:text="Open Time"
+                       android:fontFamily="@font/nexalight"
+                       android:textColor="@color/colorUnderLine"
+                       android:textSize="13.3sp"
+                       />
+
+                   <Button
+                       android:id="@+id/tuesdayOpenTime"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:text="9:00 AM"
+                       android:fontFamily="@font/nexaregular"
+                       android:textSize="13.3sp"
+                       android:layout_marginLeft="5dp"
+                       />
+
+                   <TextView
+                       android:id="@+id/tuesdayCloseTimeText"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:gravity="center_vertical"
+                       android:text="Close Time"
+                       android:textColor="@color/colorUnderLine"
+                       android:textSize="13.3sp"
+                       android:fontFamily="@font/nexalight"
+                       android:layout_marginLeft="5dp" />
+
+                   <Button
+                       android:id="@+id/tuesdayCloseTime"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:text="7:00 PM"
+                       android:fontFamily="@font/nexaregular"
+                       android:textSize="13.3sp"
+                       android:layout_marginLeft="5dp"
+                       />
+               </LinearLayout>
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:orientation="horizontal"
+                   android:layout_marginTop="10dp">
+                   <TextView
+                       android:id="@+id/wednesdayText"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:text="Wednesday"
+                       android:textStyle="bold"
+                       android:fontFamily="@font/nexaregular"
+                       android:textColor="@color/colorUnderLine"
+                       android:textSize="15sp"
+                       android:layout_marginLeft="10dp"
+                       />
+
+                   <CheckBox
+                       android:id="@+id/wednesdayClosed"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:text="Closed"
+                       android:fontFamily="@font/nexalight"
+                       android:textColor="@color/colorUnderLine"
+                       android:textSize="13.3sp"
+                       android:layout_marginEnd="15dp" />
+               </LinearLayout>
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_marginLeft="10dp"
+                   android:orientation="horizontal">
+                   <TextView
+                       android:id="@+id/wednesdayOpenTimeText"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:text="Open Time"
+                       android:fontFamily="@font/nexalight"
+                       android:textColor="@color/colorUnderLine"
+                       android:textSize="13.3sp" />
+
+                   <Button
+                       android:id="@+id/wednesdayOpenTime"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:text="9:00 AM"
+                       android:fontFamily="@font/nexaregular"
+                       android:textSize="13.3sp"
+                       android:layout_marginLeft="5dp"/>
+                   <TextView
+                       android:id="@+id/wednesdayCloseTimeText"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:text="Close Time"
+                       android:textColor="@color/colorUnderLine"
+                       android:textSize="13.3sp"
+                       android:fontFamily="@font/nexalight"
+                       android:layout_marginLeft="5dp" />
+
+                   <Button
+                       android:id="@+id/wednesdayCloseTime"
+                       android:layout_width="wrap_content"
+                       android:fontFamily="@font/nexaregular"
+                       android:layout_height="wrap_content"
+                       android:textSize="13.3sp"
+                       android:text="7:00 PM"
+                       android:layout_marginLeft="5dp" />
+               </LinearLayout>
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_marginTop="10dp"
+                   android:orientation="horizontal">
+                   <TextView
+                       android:id="@+id/thursdayText"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_marginStart="10dp"
+                       android:text="Thursday"
+                       android:textStyle="bold"
+                       android:fontFamily="@font/nexaregular"
+                       android:textColor="@color/colorUnderLine"
+                       android:textSize="15sp" />
+
+                   <CheckBox
+                       android:id="@+id/thursdayClosed"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:text="Closed"
+                       android:fontFamily="@font/nexalight"
+                       android:textColor="@color/colorUnderLine"
+                       android:textSize="13.3sp"
+                       android:layout_marginEnd="15dp" />
+
+               </LinearLayout>
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_marginLeft="10dp"
+                   android:orientation="horizontal">
+                   <TextView
+                       android:id="@+id/thursdayOpenTimeText"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:fontFamily="@font/nexalight"
+                       android:text="Open Time"
+                       android:textColor="@color/colorUnderLine"
+                       android:textSize="13.3sp"
+                        />
+
+                   <Button
+                       android:id="@+id/thursdayOpenTime"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:text="9:00 AM"
+                       android:fontFamily="@font/nexaregular"
+                       android:textSize="13.3sp"
+                       android:layout_marginLeft="5dp" />
+
+
+                   <TextView
+                       android:id="@+id/thursdayCloseTimeText"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:fontFamily="@font/nexalight"
+                       android:text="Close Time"
+                       android:textColor="@color/colorUnderLine"
+                       android:textSize="13.3sp"
+                       android:layout_marginLeft="5dp" />
+
+                   <Button
+                       android:id="@+id/thursdayCloseTime"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:text="7:00 PM"
+                       android:fontFamily="@font/nexaregular"
+                       android:textSize="13.3sp"
+                       android:layout_marginLeft="5dp"/>
+
+               </LinearLayout>
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:orientation="horizontal"
+                   android:layout_marginTop="10dp">
+                   <TextView
+                       android:id="@+id/fridayText"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:text="Friday"
+                       android:layout_marginLeft="10dp"
+                       android:fontFamily="@font/nexaregular"
+                       android:textColor="@color/colorUnderLine"
+                       android:textStyle="bold"
+                       android:textSize="15sp" />
+
+                   <CheckBox
+                       android:id="@+id/fridayClosed"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:text="Closed"
+                       android:fontFamily="@font/nexalight"
+                       android:textColor="@color/colorUnderLine"
+                       android:textSize="13.3sp"
+                       android:layout_marginEnd="15dp" />
+               </LinearLayout>
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                   android:layout_marginLeft="10dp">
+                   <TextView
+                       android:id="@+id/fridayOpenTimeText"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:text="Open Time"
+                       android:fontFamily="@font/nexalight"
+                       android:textColor="@color/colorUnderLine"
+                       android:textSize="13.3sp" />
+
+                   <Button
+                       android:id="@+id/fridayOpenTime"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:text="9:00 AM"
+                       android:fontFamily="@font/nexaregular"
+                       android:textSize="13.3sp"
+                       android:layout_marginLeft="5dp" />
+
+                   <TextView
+                       android:id="@+id/fridayCloseTimeText"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:text="Close Time"
+                       android:fontFamily="@font/nexalight"
+                       android:textColor="@color/colorUnderLine"
+                       android:textSize="13.3sp"
+                       android:layout_marginLeft="5dp" />
+
+                   <Button
+                       android:id="@+id/fridayCloseTime"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:text="7:00 PM"
+                       android:fontFamily="@font/nexaregular"
+                       android:textSize="13.3sp"
+                       android:layout_marginLeft="5dp" />
+               </LinearLayout>
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:orientation="horizontal"
+                   android:layout_marginTop="10dp">
+                   <TextView
+                       android:id="@+id/saturdayText"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_marginStart="10dp"
+                       android:text="Saturday"
+                       android:fontFamily="@font/nexaregular"
+                       android:textStyle="bold"
+                       android:textColor="@color/colorUnderLine"
+                       android:textSize="15sp"
+                       />
+
+                   <CheckBox
+                       android:id="@+id/saturdayClosed"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:text="Closed"
+                       android:fontFamily="@font/nexalight"
+                       android:textColor="@color/colorUnderLine"
+                       android:textSize="13.3sp"
+                       android:layout_marginEnd="15dp" />
+               </LinearLayout>
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:orientation="horizontal"
+                   android:layout_marginLeft="10dp">
+                   <TextView
+                       android:id="@+id/saturdayOpenTimeText"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:text="Open Time"
+                       android:fontFamily="@font/nexalight"
+                       android:textColor="@color/colorUnderLine"
+                       android:textSize="13.3sp" />
+
+                   <Button
+                       android:id="@+id/saturdayOpenTime"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:text="9:00 AM"
+                       android:fontFamily="@font/nexaregular"
+                       android:textSize="13.3sp"
+                       android:layout_marginLeft="5dp" />
+
+                   <TextView
+                       android:id="@+id/saturdayCloseTimeText"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:text="Close Time"
+                       android:fontFamily="@font/nexalight"
+                       android:textColor="@color/colorUnderLine"
+                       android:textSize="13.3sp"
+                      android:layout_marginLeft="5dp" />
+
+                   <Button
+                       android:id="@+id/saturdayCloseTime"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:text="7:00 PM"
+                       android:fontFamily="@font/nexaregular"
+                       android:textSize="13.3sp"
+                       android:layout_marginLeft="5dp" />
+               </LinearLayout>
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_marginTop="10dp"
+                   android:orientation="horizontal">
+                   <TextView
+                       android:id="@+id/sundayText"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_marginStart="10dp"
+                       android:text="Sunday"
+                       android:fontFamily="@font/nexaregular"
+                       android:textStyle="bold"
+                       android:textColor="@color/colorUnderLine"
+                       android:textSize="15sp"
+                       />
+
+                   <CheckBox
+                       android:id="@+id/sundayClosed"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:text="Closed"
+                       android:textColor="@color/colorUnderLine"
+                       android:textSize="13.3sp"
+                       android:fontFamily="@font/nexalight"
+                       android:layout_marginEnd="15dp" />
+               </LinearLayout>
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:orientation="horizontal"
+                   android:layout_marginLeft="10dp">
+                   <TextView
+                       android:id="@+id/sundayOpenTimeText"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:text="Open Time"
+                       android:fontFamily="@font/nexalight"
+                       android:textColor="@color/colorUnderLine"
+                       android:textSize="13.3sp" />
+
+                   <Button
+                       android:id="@+id/sundayOpenTime"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:text="9:00 AM"
+                       android:fontFamily="@font/nexaregular"
+                       android:textSize="13.3sp"
+                       android:layout_marginLeft="5dp" />
+
+                   <TextView
+                       android:id="@+id/sundayCloseTimeText"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:text="Close Time"
+                       android:fontFamily="@font/nexalight"
+                       android:textColor="@color/colorUnderLine"
+                       android:textSize="13.3sp"
+                       android:layout_marginLeft="5dp" />
+
+                   <Button
+                       android:id="@+id/sundayCloseTime"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:text="7:00 PM"
+                       android:fontFamily="@font/nexaregular"
+                       android:textSize="13.3sp"
+                       android:layout_marginLeft="5dp" />
+               </LinearLayout>
+
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_marginLeft="10dp"
+                   android:layout_marginTop="20dp"
+                   android:textSize="19.7sp"
+                   android:text="Documents"
+                   android:textStyle="bold"
+                   android:textColor="@color/colorUnderLine"/>
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_marginLeft="10dp"
+                   android:layout_marginTop="20dp"
+                   android:layout_marginRight="10dp">
+                   <Button
+                       android:id="@+id/salonImage"
+                       android:layout_width="200dp"
+                       android:layout_height="wrap_content"
+                       android:text="Upload Salon Image"
+                       android:fontFamily="@font/nexaregular"
+                       android:textSize="13.3sp"
+                       android:textAllCaps="false"
+                       android:background="@drawable/new_button_red"
+                       android:textColor="@color/colorWhite"/>
+                   <TextView
+                       android:id="@+id/uploadSalonPath"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_marginLeft="5dp"
+                       android:fontFamily="@font/nexaregular"
+                       android:textSize="13.3sp"
+                       android:text="Pending"/>
+               </LinearLayout>
+
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_marginLeft="10dp"
+                   android:layout_marginTop="20dp"
+                   android:layout_marginRight="10dp">
+                   <Button
+                       android:id="@+id/uploadRegCert"
+                       android:layout_width="200dp"
+                       android:layout_height="wrap_content"
+                       android:text="Upload Registration Certificate"
+                       android:textAllCaps="false"
+                       android:fontFamily="@font/nexaregular"
+                       android:textSize="13.3sp"
+                       android:background="@drawable/new_button_red"
+                       android:textColor="@color/colorWhite"/>
+                   <TextView
+                       android:id="@+id/uploadRegPath"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:text="Pending"
+                       android:textSize="13.3sp"
+                       android:fontFamily="@font/nexaregular"
+                       android:layout_marginLeft="5dp"/>
+               </LinearLayout>
+
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_marginLeft="10dp"
+                   android:layout_marginTop="20dp"
+                   android:layout_marginRight="10dp">
+                   <Button
+                       android:id="@+id/uploadMsMeCert"
+                       android:layout_width="200dp"
+                       android:layout_height="wrap_content"
+                       android:text="Upload MSME Certificate"
+                       android:textAllCaps="false"
+                       android:fontFamily="@font/nexaregular"
+                       android:textSize="13.3sp"
+                       android:background="@drawable/new_button_red"
+                       android:textColor="@color/colorWhite"/>
+                   <TextView
+                       android:id="@+id/uploadMsMePath"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:text="Pending"
+                       android:fontFamily="@font/nexaregular"
+                       android:textSize="13.3sp"
+                       android:layout_marginLeft="5dp"/>
+               </LinearLayout>
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_marginLeft="10dp"
+                   android:layout_marginTop="20dp"
+                   android:orientation="horizontal"
+                   android:layout_marginRight="5dp">
+               <CheckBox
+                   android:id="@+id/acceptCheck"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text=""
+                   android:textSize="15sp"
+                   />
+               <TextView
+                   android:id="@+id/termsAndConditionsText"
+                   android:padding="2dp"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:fontFamily="@font/nexaregular"
+                   android:text="I accept Terms and Conditions of SalonQs"
+                   android:textColor="@color/colorUnderLine"
+                   android:textSize="13.3sp"
+                   />
+               </LinearLayout>
+
+                <Button
+                    android:id="@+id/submitFormButton"
+                    android:layout_width="300dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/new_button_red"
+                    android:textColor="@color/colorWhite"
+                    android:fontFamily="@font/nexaregular"
+                    android:textSize="13.3sp"
+                    android:text="Submit"
+                    android:layout_marginBottom="15dp"
+                    android:layout_gravity="center"/>
+
+               <TextView
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+
+                   android:text="" />
+
+
+
+               <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:text="" />
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".5"
+                    android:background="@drawable/buttons"
+                    android:text="Submit" />
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".5"
+                    android:background="@drawable/buttons"
+                    android:text="Submit" />
+
+           </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ViewModel.BookingDetails">
+    <include
+        android:id="@+id/bookingQueueDetailsToolbar"
+        layout="@layout/new_bar_design_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true" />
+    <RelativeLayout
+        android:padding="7dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <TextView
+            android:id="@+id/queueDetailUserName"
+            android:layout_width="wrap_content"
+            android:fontFamily="@font/nexaregular"
+            android:textStyle="bold"
+            android:textColor="@color/colorUnderLine"
+            android:textSize="15sp"
+            android:layout_marginTop="11dp"
+            android:layout_height="wrap_content"
+            android:text="Name"/>
+        <TextView
+            android:id="@+id/queueDetailUserGender"
+            android:layout_width="wrap_content"
+            android:textStyle="bold"
+            android:textColor="@color/colorUnderLine"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/nexaregular"
+            android:textSize="15sp"
+            android:layout_toRightOf="@id/queueDetailUserName"
+            android:layout_alignBaseline="@id/queueDetailUserName"
+            android:text="(Gender)"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="11dp"
+            android:text="Q"
+            android:padding="5dp"
+            android:layout_marginEnd="15dp"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/queue_background"
+            android:id="@+id/queueDetailQueueNumber"
+            android:textColor="@color/colorUnderLine"
+            android:fontFamily="@font/nexaregular"
+            android:textSize="14.2sp"
+            android:textStyle="bold"
+            />
+        <TextView
+            android:id="@+id/queueDetailUserMobileText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/nexaregular"
+            android:textStyle="bold"
+            android:layout_below="@id/queueDetailUserName"
+            android:text="Mobile Number"/>
+        <TextView
+            android:id="@+id/queueDetailUserMobile"
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="11dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/queueDetailUserName"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/nexalight"
+            android:textStyle="bold"
+            android:layout_toRightOf="@id/queueDetailUserMobileText"
+            android:text="Mobile Number"/>
+        <TextView
+            android:id="@+id/queueDetailServingTimeText"
+            android:layout_width="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/nexaregular"
+            android:textStyle="bold"
+            android:layout_below="@id/queueDetailUserMobile"
+            android:text="Serving Time"/>
+        <TextView
+            android:id="@+id/queueDetailServingTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="11dp"
+            android:fontFamily="@font/nexalight"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/queueDetailUserMobile"
+            android:layout_toRightOf="@id/queueDetailServingTimeText"
+            android:layout_alignBaseline="@id/queueDetailServingTimeText"
+            android:text="Serving Time"/>
+
+
+    </RelativeLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="11dp"
+        android:padding="7dp"
+        android:id="@+id/bookingQueueDetailsRecyclerView"/>
+
+
+    <LinearLayout
+        android:id="@+id/startBookingLayout"
+        android:layout_width="wrap_content"
+        android:orientation="vertical"
+        android:padding="5dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="31dp"
+        android:layout_height="wrap_content">
+        <Button
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:fontFamily="@font/nexaregular"
+            android:textStyle="bold"
+            android:textSize="13.3sp"
+            android:id="@+id/bookingStartButton"
+            android:text="Start"
+            android:textAllCaps="false"
+            android:background="@drawable/new_button_red"
+            android:textColor="@color/colorWhite"/>
+        <Button
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:fontFamily="@font/nexaregular"
+            android:textStyle="bold"
+            android:textSize="13.3sp"
+            android:layout_marginTop="10dp"
+            android:id="@+id/bookingEndButton"
+            android:text="End"
+            android:textAllCaps="false"
+            android:background="@drawable/new_button_red"
+            android:textColor="@color/colorWhite"/>
+    </LinearLayout>
+
+
+</LinearLayout>

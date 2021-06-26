@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="11dp"
+    android:background="@color/colorRed"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:cardCornerRadius="5dp"
+        android:padding="5dp">
+        <RelativeLayout
+            android:padding="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/bookingId"
+                android:fontFamily="@font/nexabold"
+                android:textSize="15sp"
+                android:text="Booking Id"
+                android:textColor="@color/colorUnderLine"
+                android:textStyle="bold"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/bookingIdText"
+                android:fontFamily="@font/nexabold"
+                android:textSize="15sp"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@id/bookingId"
+                android:text="Booking Id Value"
+                android:textStyle="bold"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/totalServices"
+                android:layout_marginTop="5dp"
+                android:text="Total Services"
+                android:textColor="@color/colorUnderLine"
+                android:fontFamily="@font/nexalight"
+                android:layout_below="@id/bookingId"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/totalServicesText"
+                android:layout_marginTop="5dp"
+                android:text="Total Services Value"
+                android:fontFamily="@font/nexalight"
+                android:layout_marginLeft="35dp"
+                android:textColor="@color/colorUnderLine"
+                android:layout_toRightOf="@id/totalServices"
+                android:layout_below="@id/bookingId"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/noOfPersonsText"
+                android:fontFamily="@font/nexalight"
+                android:text="No of Persons"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/colorUnderLine"
+                android:layout_below="@id/totalServices"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/noOfPersons"
+                android:fontFamily="@font/nexalight"
+                android:text="No of Persons Value"
+                android:layout_marginTop="5dp"
+                android:layout_toRightOf="@id/noOfPersonsText"
+                android:layout_alignBaseline="@id/noOfPersonsText"
+                android:layout_alignStart="@id/totalServicesText"
+                android:textColor="@color/colorUnderLine"
+                android:layout_below="@id/totalServices"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/createdAt"
+                android:fontFamily="@font/nexalight"
+                android:text="Created At"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/colorUnderLine"
+                android:layout_below="@id/noOfPersonsText"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Date"
+                android:fontFamily="@font/nexalight"
+                android:layout_marginLeft="16dp"
+                android:id="@+id/bookingDate"
+                android:textColor="@color/colorUnderLine"
+                android:layout_marginTop="5dp"
+                android:layout_toRightOf="@id/createdAt"
+                android:layout_below="@id/noOfPersons"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="time"
+                android:fontFamily="@font/nexalight"
+                android:id="@+id/bookingTime"
+                android:layout_below="@id/noOfPersons"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/colorUnderLine"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@id/bookingDate"/>
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

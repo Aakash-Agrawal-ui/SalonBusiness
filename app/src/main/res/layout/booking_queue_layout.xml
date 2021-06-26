@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="11dp"
+    android:background="@color/colorRed"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:cardCornerRadius="5dp"
+        android:padding="5dp">
+        <RelativeLayout
+            android:padding="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/bookingQueueUserName"
+                android:fontFamily="@font/nexabold"
+                android:textSize="15sp"
+                android:text="Booking UserName"
+                android:textColor="@color/colorUnderLine"
+                android:textStyle="bold"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/bookingQueueUserGender"
+                android:fontFamily="@font/nexabold"
+                android:textSize="15sp"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@id/bookingQueueUserName"
+                android:text="Booking User Gender"
+                android:textStyle="bold"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/totalQueueServices"
+                android:layout_marginTop="5dp"
+                android:text="Total Services"
+                android:textColor="@color/colorUnderLine"
+                android:fontFamily="@font/nexalight"
+                android:layout_below="@id/bookingQueueUserName"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/totalQueueServicesText"
+                android:layout_marginTop="5dp"
+                android:text="Total Services Value"
+                android:fontFamily="@font/nexalight"
+                android:layout_marginLeft="35dp"
+                android:textColor="@color/colorUnderLine"
+                android:layout_toRightOf="@id/totalQueueServices"
+                android:layout_below="@id/bookingQueueUserName"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/queueServingTimeText"
+                android:fontFamily="@font/nexalight"
+                android:text="Serving Time"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/colorUnderLine"
+                android:layout_below="@id/totalQueueServices"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/queueServingTime"
+                android:fontFamily="@font/nexalight"
+                android:text="Serving Time Value"
+                android:layout_marginTop="5dp"
+                android:layout_toRightOf="@id/queueServingTimeText"
+                android:layout_alignBaseline="@id/queueServingTimeText"
+                android:layout_alignStart="@id/totalQueueServicesText"
+                android:textColor="@color/colorUnderLine"
+                android:layout_below="@id/totalQueueServices"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/queueCreatedAt"
+                android:fontFamily="@font/nexalight"
+                android:text="Created At"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/colorUnderLine"
+                android:layout_below="@id/queueServingTimeText"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Date"
+                android:fontFamily="@font/nexalight"
+                android:layout_marginLeft="16dp"
+                android:id="@+id/queueBookingDate"
+                android:textColor="@color/colorUnderLine"
+                android:layout_marginTop="5dp"
+                android:layout_toRightOf="@id/queueCreatedAt"
+                android:layout_below="@id/queueServingTimeText"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="time"
+                android:fontFamily="@font/nexalight"
+                android:id="@+id/queueBookingTime"
+                android:layout_below="@id/queueServingTimeText"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/colorUnderLine"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@id/queueBookingDate"/>
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

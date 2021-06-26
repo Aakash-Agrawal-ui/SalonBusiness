@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ViewModel.Queue">
+    <include
+        android:id="@+id/queueToolbar"
+        layout="@layout/new_bar_design_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true" />
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/queue_tab_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:tabGravity="fill"
+        app:tabMode="scrollable"
+        app:tabTextAppearance="@style/TabStyle"
+        android:layout_below="@id/queueToolbar"
+        android:background="@color/colorRed"
+        app:tabTextColor="@color/colorWhite"
+        app:tabIndicatorColor="@color/colorWhite"/>
+    <androidx.viewpager.widget.ViewPager
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/queueViewPager"
+        android:layout_below="@id/queue_tab_layout"
+        android:layout_above="@id/navigation_view_queue"
+        />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/navigation_view_queue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorWhite"
+        app:itemTextColor="@color/colorUnderLine"
+        app:menu="@menu/navigation_menu">
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+</RelativeLayout>

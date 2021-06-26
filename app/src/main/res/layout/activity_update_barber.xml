@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ViewModel.UpdateBarber">
+    <include
+        android:id="@+id/updateBarberToolbar"
+        layout="@layout/new_bar_design_layout"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/updateBarberName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="30dp"
+        android:textColorHint="@color/colorUnderLine"
+        app:errorEnabled="true"
+        android:textSize="13.3sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/updateBarberToolbar"
+        app:layout_constraintVertical_bias="0.121">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Expert Name"
+            android:textStyle="bold"
+            android:fontFamily="@font/nexalight"
+            android:paddingLeft="5dp"
+            android:inputType="text" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <LinearLayout
+        android:id="@+id/update_barber_linear_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/updateBarberName"
+        app:layout_constraintVertical_bias="0.23">
+
+        <TextView
+            android:id="@+id/updateBarberTextGender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Select Gender"
+            android:textStyle="bold"
+            android:fontFamily="@font/nexalight"
+            android:textColor="@color/colorUnderLine"
+            android:textSize="18sp" />
+
+        <RadioGroup
+            android:id="@+id/updateRadioGroupBarber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="30dp"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/updateBarberMale"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@drawable/male_design"
+                android:button="@drawable/male" />
+
+            <RadioButton
+                android:id="@+id/updateBarberFemale"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:background="@drawable/male_design"
+                android:button="@drawable/female" />
+
+        </RadioGroup>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/updateBarberButton"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:background="@drawable/new_button_red"
+        android:text="Update Expert"
+        android:fontFamily="@font/nexaregular"
+        android:textAllCaps="false"
+        android:textColor="@color/colorWhite"
+        android:textSize="13.3sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/update_barber_linear_layout" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

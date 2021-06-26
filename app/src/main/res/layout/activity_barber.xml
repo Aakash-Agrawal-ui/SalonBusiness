@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ViewModel.Barber">
+    <include
+        android:id="@+id/barberToolbar"
+        layout="@layout/new_bar_design_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true" />
+    <TextView
+        android:id="@+id/salonStateText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/addBarberButtonLink"
+        android:textColor="@color/colorWhite"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="13.3dp"
+        android:textSize="18sp"
+        android:layout_toLeftOf="@id/shopSettingsStatus"
+        android:gravity="center"
+        android:text="Salon"
+        android:fontFamily="@font/nexaregular"
+        android:textStyle="bold"/>
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/shopSettingsStatus"
+        android:layout_width="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="15dp"
+        android:textOff="OFF"
+        android:textOn="ON"
+        android:fontFamily="@font/nexalight"
+        android:thumb="@drawable/state"
+        app:track="@drawable/track"
+        app:showText="true"
+        android:layout_above="@id/addBarberButtonLink"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:id="@+id/addBarberButtonLink"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Add Expert"
+        android:padding="5dp"
+        android:textAllCaps="false"
+        android:fontFamily="@font/nexaregular"
+        android:textColor="@color/colorWhite"
+        android:textSize="13.3sp"
+        android:textStyle="bold"
+        android:layout_below="@id/barberToolbar"
+        android:background="@color/colorRed"/>
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/barber_tab_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:tabGravity="fill"
+        app:tabMode="scrollable"
+        android:layout_below="@id/addBarberButtonLink"
+        app:tabTextAppearance="@style/TabStyle"
+        android:background="@color/colorRed"
+        app:tabTextColor="@color/colorWhite"
+        app:tabIndicatorColor="@color/colorWhite"/>
+    <androidx.viewpager.widget.ViewPager
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/barberViewPager"
+        android:layout_below="@id/barber_tab_layout"
+        android:layout_above="@id/navigation_view_barber"
+        />
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/navigation_view_barber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorWhite"
+        app:itemTextColor="@color/colorUnderLine"
+        app:menu="@menu/navigation_menu">
+
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+</RelativeLayout>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ViewModel.UpdateNumber">
+    <include
+        android:id="@+id/update_number_toolbar"
+        layout="@layout/new_bar_design_layout"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/updateLoginMobileNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:counterEnabled="true"
+        app:counterMaxLength="10"
+        app:counterTextColor="@color/colorUnderLine"
+        app:errorEnabled="true"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:textSize="13.3sp"
+        android:textColorHint="@color/colorUnderLine"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/update_number_toolbar"
+        app:layout_constraintVertical_bias="0.16">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="New Mobile Number"
+            android:fontFamily="@font/nexalight"
+            android:paddingLeft="5dp"
+            android:inputType="number"
+            android:textColor="@color/colorUnderLine"
+            android:textStyle="bold" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/updateLoginUserPasswordProfile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:textColorHint="@color/colorUnderLine"
+        app:errorEnabled="true"
+        android:textSize="13.3sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/updateLoginMobileNumber"
+        app:passwordToggleDrawable="@drawable/password_toogle_selector"
+        app:passwordToggleEnabled="true"
+        app:layout_constraintVertical_bias="0.091">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Existing Password"
+            android:inputType="text"
+            android:fontFamily="@font/nexalight"
+            android:paddingLeft="5dp"
+            android:textColor="@color/colorUnderLine"
+            android:textStyle="bold" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/updateNumberButtonUser"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:background="@drawable/new_button_red"
+        android:text="Update Number"
+        android:textColor="@color/colorWhite"
+        android:textSize="13.3sp"
+        android:fontFamily="@font/nexaregular"
+        android:textAllCaps="false"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/updateLoginUserPasswordProfile" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

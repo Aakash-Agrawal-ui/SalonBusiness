@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UpdateShopInfo">
+    <include
+        android:id="@+id/update_salon_toolbar"
+        layout="@layout/new_bar_design_layout"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/updateOwnerName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColorHint="@color/colorUnderLine"
+        app:errorEnabled="true"
+        android:layout_marginEnd="25dp"
+        android:layout_marginStart="25dp"
+        android:textSize="13.3sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+
+        app:layout_constraintTop_toBottomOf="@+id/update_salon_toolbar"
+        app:layout_constraintVertical_bias="0.061">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Owner Name"
+            android:inputType="text"
+            android:textStyle="bold"
+            android:fontFamily="@font/nexalight"
+            android:paddingLeft="5dp"
+            tools:layout_editor_absoluteX="3dp"
+            tools:layout_editor_absoluteY="75dp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/updateSalonMobile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginEnd="25dp"
+        android:textColorHint="@color/colorUnderLine"
+        app:counterEnabled="true"
+        app:counterMaxLength="10"
+        app:counterTextColor="@color/colorUnderLine"
+        app:errorEnabled="true"
+        android:textSize="13.3sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/updateOwnerName"
+        app:layout_constraintVertical_bias="0.066">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Salon Mobile Number"
+            android:fontFamily="@font/nexalight"
+            android:paddingLeft="5dp"
+            android:textStyle="bold"
+            android:inputType="number" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/updateSalonEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginEnd="25dp"
+        android:textColorHint="@color/colorUnderLine"
+        app:errorEnabled="true"
+        android:textSize="13.3sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/updateSalonMobile"
+        app:layout_constraintVertical_bias="0.089">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Salon Email"
+            android:fontFamily="@font/nexalight"
+            android:paddingLeft="5dp"
+            android:textStyle="bold"
+            android:inputType="textEmailAddress" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/shopFacilityText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:text="Shop Facilities"
+        android:textStyle="bold"
+        android:fontFamily="@font/nexaregular"
+        android:textColor="@color/colorUnderLine"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.021"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/updateSalonEmail"
+        app:layout_constraintVertical_bias="0.056" />
+
+    <TableLayout
+        android:id="@+id/tableLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="25dp"
+        app:layout_constraintTop_toBottomOf="@id/shopFacilityText"
+        tools:layout_editor_absoluteX="10dp">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <CheckBox
+                android:id="@+id/acAvailableCheckUpdate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:text="AC Facilities"
+                android:fontFamily="@font/nexalight"
+                android:textColor="@color/colorUnderLine"
+                android:textSize="13.3sp" />
+
+            <CheckBox
+                android:id="@+id/carParkingCheckUpdate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/nexalight"
+                android:layout_marginLeft="13.3dp"
+                android:text="Car Parking"
+                android:textColor="@color/colorUnderLine"
+                android:textSize="15sp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <CheckBox
+                android:id="@+id/bikeParkingCheckUpdate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="13.3dp"
+                android:text="Bike Parking"
+                android:fontFamily="@font/nexalight"
+                android:textColor="@color/colorUnderLine"
+                android:textSize="15sp" />
+
+            <CheckBox
+                android:id="@+id/onlinePaymentCheckUpdate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="13.3dp"
+                android:text="Online Payment"
+                android:fontFamily="@font/nexalight"
+                android:textColor="@color/colorUnderLine"
+                android:textSize="15sp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <CheckBox
+                android:id="@+id/homeServiceCheckUpdate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:text="Home Service"
+                android:fontFamily="@font/nexalight"
+                android:textColor="@color/colorUnderLine"
+                android:textSize="13.3sp" />
+
+            <CheckBox
+                android:id="@+id/cardPaymentCheckUpdate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:text="Card Payment"
+                android:fontFamily="@font/nexalight"
+                android:textColor="@color/colorUnderLine"
+                android:textSize="13.3sp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <CheckBox
+                android:id="@+id/hotWaterCheckUpdate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:text="Hot Water"
+                android:textColor="@color/colorUnderLine"
+                android:fontFamily="@font/nexalight"
+                android:textSize="13.3sp" />
+
+            <CheckBox
+                android:id="@+id/musicCheckUpdate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:text="Music"
+                android:fontFamily="@font/nexalight"
+                android:textColor="@color/colorUnderLine"
+                android:textSize="13.3sp" />
+        </TableRow>
+    </TableLayout>
+
+    <Button
+        android:id="@+id/updateShopDetailsButton"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:background="@drawable/new_button_red"
+        android:text="Update Salon Details"
+        android:textColor="@color/colorWhite"
+        android:textSize="13.3sp"
+        android:textAllCaps="false"
+        android:fontFamily="@font/nexaregular"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tableLayout2" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

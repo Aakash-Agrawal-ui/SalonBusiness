@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ViewModel.AddSalonView">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        tools:ignore="MissingPrefix">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Terms and Conditions "
+            android:textColor="@color/colorUnderLine"
+            android:layout_marginTop="5dp"
+            android:textStyle="bold"
+            android:padding="3dp"
+            android:textSize="28sp"
+            android:gravity="center"
+            android:id="@+id/termsPdfAddSalon"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="20dp"
+            android:textSize="16sp"
+            android:textColor="@color/colorUnderLine"
+            android:text="Please read the following terms and conditions carefully as it sets out the terms of a legally binding agreement
+between you (The Salon Owner/Manager) and DMDT Technologies (For SalonQs)."/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="20dp"
+            android:textSize="16sp"
+            android:textColor="@color/colorUnderLine"
+            android:text="1. Salon Owner/Manager (“Partner”) as using our SalonQs App for their business purpose DMDT
+Technologies who is owner of SalonQs App is charging per transaction 10% for the online services,
+online transaction and customer support.
+\n\n2. Those Salon Owner/Manager (“Partner”) are joining us in any of our promotional campaign they will
+be getting that offer during that period only and after that period gets over, they will have to start
+paying us flat 10% per transaction as per point number 1.
+\n\n3. Salon Owner/Manager (“Partner”) are agree with the services they provide to our customer; they are
+the sole responsible and DMDT Technologies (SalonQs) not responsible for any customer complaints
+and service-related issues.
+\n\n4. Salon Owner/Manager (“Partner”) are agreeing that they will accept the booking whenever they
+receive through SalonQs app and if Salon Owner/Manager (“Partner”) decline the customer then
+DMDT Technologies (SalonQs) is having rights to deduct 3% of the booking amount by customer
+since DMDT Technologies need to pay transactional charges to the Payment Gateway Company.
+\n\n5. Salon Owner/Manager (“Partner”) whatever price for each service will add in the application it will
+reflect to the customer directly in User application. DMDT Technologies (SalonQs) don’t change any
+amount per services.
+\n\n6. Salon Owner/Manager (“Partner”) whatever discount amount (%) enters in the app, it will directly
+reflect to the User app. DMDT Technologies don’t add any discount through Business app or charges
+any extra amount to show discounted price in User app.
+\n\n7. Salon Owner/Manager (“Partner”) need to provide valid documents to the DMDT Technologies
+(SalonQs) if legal issues came across then Salon Owner/Manager (“Partner”) will be sole responsible
+and need to justify legal sources. DMDT Technologies (SalonQs) is not responsible for any
+misconduct/services-related issue happened.
+\n\n8. Salon Owner/Manager (“Partner”) have to add “Chair Availability” based on total number of Queues
+they are managing through our Business App. Number of Barbers are nothing but number of Queues
+and nothing but number of chairs available in the salon. (Number of Barber = Number of Chairs =
+Number of Queues). Please contact our help button to contact us for more information."/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="13dp"
+            android:textSize="20sp"
+            android:text=""
+            android:textColor="@color/colorUnderLine"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="13dp"
+            android:textSize="20sp"
+            android:text=""
+            android:textColor="@color/colorUnderLine"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="13dp"
+            android:textSize="20sp"
+            android:text=""
+            android:textColor="@color/colorUnderLine"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="13dp"
+            android:textSize="20sp"
+            android:text=""
+            android:textColor="@color/colorUnderLine"/>
+
+    </LinearLayout>
+
+
+</ScrollView>
+
+

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="7dp"
+    android:padding="5dp">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Customer name"
+        android:id="@+id/bookingDetailsCustomerName"
+        android:textColor="@color/colorUnderLine"
+        android:fontFamily="@font/nexaregular"
+        android:textSize="14.2sp"
+        android:textStyle="bold"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" (Gender)"
+        android:layout_toRightOf="@id/bookingDetailsCustomerName"
+        android:id="@+id/bookingDetailsCustomerGender"
+        android:textColor="@color/colorUnderLine"
+        android:fontFamily="@font/nexaregular"
+        android:textSize="14.2sp"
+        android:textStyle="bold"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Q"
+        android:padding="5dp"
+        android:layout_marginEnd="15dp"
+        android:layout_alignParentRight="true"
+
+        android:background="@drawable/queue_background"
+        android:id="@+id/bookingDetailsCustomerQueue"
+        android:textColor="@color/colorUnderLine"
+        android:fontFamily="@font/nexaregular"
+
+        android:textSize="14.2sp"
+        android:textStyle="bold"
+        />
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_marginTop="11dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="3dp"
+        android:layout_below="@id/bookingDetailsCustomerName"
+        android:id="@+id/bookingDetailsServicesRecyclerView"
+        />
+
+    <TextView
+        android:id="@+id/bookingDetailsServingExpert"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/bookingDetailsServicesRecyclerView"
+        android:fontFamily="@font/nexaregular"
+        android:text="Serving Expert"
+        android:textColor="@color/colorGrayLight"
+        android:textSize="13.7sp"
+
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Serving Expert Name"
+        android:layout_marginLeft="11dp"
+        android:id="@+id/bookingDetailsServingExpertName"
+        android:textColor="@color/colorRed"
+        android:layout_toRightOf="@id/bookingDetailsServingExpert"
+        android:layout_below="@id/bookingDetailsServicesRecyclerView"
+        android:fontFamily="@font/nexaregular"
+        android:textSize="13.7sp"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Serving Time"
+        android:id="@+id/bookingDetailsServingTime"
+        android:textColor="@color/colorGrayLight"
+        android:layout_below="@id/bookingDetailsServingExpert"
+        android:fontFamily="@font/nexaregular"
+        android:textSize="13.7sp"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Serving Time Value"
+        android:id="@+id/bookingDetailsServingTimeValue"
+        android:textColor="@color/colorUnderLine"
+        android:layout_below="@id/bookingDetailsServingExpert"
+        android:fontFamily="@font/nexaregular"
+        android:layout_toRightOf="@id/bookingDetailsServingTime"
+        android:layout_marginLeft="11dp"
+        android:textSize="13.7sp"
+    />
+
+
+
+
+</RelativeLayout>
