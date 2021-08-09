@@ -11,7 +11,7 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/barkentina"
         android:gravity="center"
-        android:text="SalonQs"
+        android:text="SalonOnline"
         android:textColor="@color/colorRed"
         android:textSize="27.7sp"
         android:textStyle="bold"
